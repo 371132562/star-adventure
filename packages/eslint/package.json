@@ -1,0 +1,15 @@
+{
+  "name": "@star/eslint-config",
+  "version": "0.0.1",
+  "module": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "eslint config with prettier for star projects",
+  "devDependencies": {
+    "eslint": "^9.2.0"
+  }
+}

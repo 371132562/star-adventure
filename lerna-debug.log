@@ -1,0 +1,19 @@
+0 silly argv { _: [ 'list' ], lernaVersion: '8.1.3', '$0': 'lerna' }
+1 notice cli v8.1.3
+2 verbose packageConfigs Package manager "pnpm" detected. Resolving packages using `pnpm-workspace.yaml`.
+3 verbose rootPath /Users/zhaolinxing/projects/star-adventure
+4 error Failed to process project graph. Run "nx reset" to fix this. Please report the issue if you keep seeing it.
+4 error   The "nx/core/package-json-workspaces" plugin threw an error while creating nodes from packages/vue-components/package.json:
+4 error     Error: InvalidSymbol in /Users/zhaolinxing/projects/star-adventure/packages/vue-components/package.json at 1:1
+4 error     [0m[31m[1m>[22m[39m[90m 1 | [39mll[0m
+4 error     [0m [90m   | [39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+4 error
+4 error         at parseJson (/Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/utils/json.js:27:15)
+4 error         at readJsonFile (/Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/utils/fileutils.js:22:37)
+4 error         at createNodeFromPackageJson (/Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/plugins/package-json-workspaces/create-nodes.js:45:47)
+4 error         at exports.createNodes (/Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/plugins/package-json-workspaces/create-nodes.js:21:20)
+4 error         at /Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/project-graph/plugins/utils.js:49:54
+4 error         at Array.map (<anonymous>)
+4 error         at runCreateNodesInParallel (/Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/project-graph/plugins/utils.js:47:34)
+4 error         at LoadedNxPlugin.createNodes (/Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/project-graph/plugins/internal-api.js:23:74)
+4 error         at createProjectConfigurations (/Users/zhaolinxing/projects/star-adventure/node_modules/.pnpm/nx@19.0.4/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:253:17)
