@@ -50,3 +50,9 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+
+/apps/adventure/.astro
+/apps/adventure/node_modules
+/packages/vue-components/node_modules
+/packages/react-components/node_modules
