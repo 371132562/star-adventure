@@ -4,14 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.8.4",
     "@astrojs/check": "^0.7.0",
-    "typescript": "^5.4.5"
+    "@astrojs/vue": "^4.3.0",
+    "@star/vue-components": "workspace:^",
+    "astro": "^4.8.4",
+    "typescript": "^5.4.5",
+    "vue": "^3.4.27"
   }
 }
