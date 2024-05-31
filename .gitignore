@@ -32,7 +32,6 @@ next-env.d.ts
 
 node_modules/
 .DS_Store
-.astro
 dist
 dist-ssr
 coverage
@@ -51,5 +50,3 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-
-/apps/adventure/node_modules/
