@@ -50,3 +50,5 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+/apps/adventure/node_modules/
