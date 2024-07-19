@@ -95,16 +95,6 @@ importers:
 
   packages/eslint-config: {}
 
-  packages/eslint-configa:
-    dependencies:
-      '@star/eslint-config':
-        specifier: workspace:^
-        version: link:../eslint-config
-    devDependencies:
-      eslint:
-        specifier: ^9.7.0
-        version: 9.7.0
-
 packages:
 
   /@alloc/quick-lru@5.2.0:

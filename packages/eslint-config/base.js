@@ -8,7 +8,7 @@ export default [
   ...tseslint.configs.recommended,
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx,vue}"],
-    ignores: ["**/node_modules/*", "**/.nuxt/*"],
+    ignores: ["**/node_modules/*", "**/.nuxt/*", "**/.next/*", "**/.nx/*"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
