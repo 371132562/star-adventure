@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-node_modules/
-=======
 # next.js
 .next/
 .nx
@@ -60,4 +57,3 @@ coverage
 *.sw?
 
 *.tsbuildinfo
->>>>>>> Stashed changes
