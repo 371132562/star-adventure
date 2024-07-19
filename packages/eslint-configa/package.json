@@ -1,0 +1,14 @@
+{
+  "name": "@star/eslint-configa",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {},
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.7.0"
+  },
+  "dependencies": {
+    "@star/eslint-config": "workspace:^"
+  }
+}
