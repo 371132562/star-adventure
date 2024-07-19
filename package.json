@@ -6,6 +6,7 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.7.0",
     "@nuxt/eslint": "^0.3.13",
     "eslint": "^9.7.0",
