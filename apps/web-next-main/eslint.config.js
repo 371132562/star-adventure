@@ -1,15 +1,18 @@
-import base from '@star/eslint-config/base.js';
-import eslintPluginReact from 'eslint-plugin-react';
+import base from "@star/eslint-config/base.tsconfig.js";
+import eslintPluginReact from "eslint-plugin-react";
 // import path from 'node:path';
 // import { fileURLToPath } from 'node:url';
 // import { FlatCompat } from '@eslint/eslintrc';
 
 export default [
+  eslintPluginReact.configs.flat.recommended,
+  ...base,
   {
-    plugins: {
-      eslintPluginReact
-    }
-  }, ...base];
+    rules: {
+      "react/react-in-jsx-scope": "off",
+    },
+  },
+];
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);

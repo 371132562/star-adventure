@@ -1,3 +1,3 @@
-import base from "./base.js";
+import base from "./base.tsconfig.js";
 
 export default [...base];

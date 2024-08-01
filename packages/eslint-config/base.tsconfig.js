@@ -6,6 +6,7 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
+  eslintPluginPrettierRecommended,
   {
     name: "starEsLint",
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx,vue}"],
@@ -23,5 +24,4 @@ export default [
       reportUnusedDisableDirectives: "error",
     },
   },
-  eslintPluginPrettierRecommended,
 ];
