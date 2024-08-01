@@ -7,6 +7,7 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    name: "starEsLint",
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx,vue}"],
     ignores: ["**/node_modules/*", "**/.nuxt/*", "**/.next/*", "**/.nx/*"],
     languageOptions: {

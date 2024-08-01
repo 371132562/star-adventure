@@ -1,5 +1,5 @@
 {
-  "name": "@star/web-nuxt-main",
+  "name": "@star/web-nuxt-sub",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -10,11 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.12.3",
+    "nuxt": "^3.12.4",
     "vue": "latest"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/eslint": "^0.4.0",
     "@star/eslint-config": "workspace:^"
   }
 }
