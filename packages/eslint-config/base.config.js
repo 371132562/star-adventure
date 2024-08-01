@@ -1,6 +1,7 @@
 // import globals from "globals";
 import pluginJs from "@eslint/js";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 export default [
   pluginJs.configs.recommended,
@@ -20,6 +21,13 @@ export default [
     },
     linterOptions: {
       reportUnusedDisableDirectives: "error",
+    },
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
     },
   },
 ];
