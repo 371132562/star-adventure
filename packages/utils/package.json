@@ -4,6 +4,6 @@
   "version": "0.0.1",
   "scripts": {},
   "devDependencies": {
-    "@star/eslint-config": "workspace:^"
+    "@star/eslint-prettier-config": "workspace:^"
   }
 }

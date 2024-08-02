@@ -1,5 +1,5 @@
 {
-  "name": "@star/eslint-config",
+  "name": "@star/eslint-prettier-config",
   "type": "module",
   "version": "0.0.1",
   "scripts": {},
@@ -8,6 +8,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.8.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "typescript-eslint": "^7.17.0"
   },
   "dependencies": {
