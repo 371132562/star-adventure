@@ -3,7 +3,8 @@ import '@/assets/styles/globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import RootLayout from '../components/RootLayout';
+import RootLayout from '@/components/RootLayout';
+import ThemeProvider from '@/components/Theme/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,7 +21,14 @@ export default function App({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <RootLayout>{children}</RootLayout>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <RootLayout>{children}</RootLayout>
+        </ThemeProvider>
       </body>
     </html>
   );

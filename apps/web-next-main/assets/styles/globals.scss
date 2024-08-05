@@ -63,7 +63,15 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #424242 transparent;
+  scrollbar-gutter: stable;
+}
+

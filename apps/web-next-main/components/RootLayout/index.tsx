@@ -8,11 +8,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="grid h-screen w-screen grid-cols-[240px_1fr] overflow-hidden bg-amber-300">
+    <div className="mx-auto my-0 grid h-dvh w-dvw max-w-screen-xl grid-cols-[300px_1fr] overflow-hidden">
       <Aside />
-      <main>
+      <main className="h-dvh">
         <Header />
-        <section>{children}</section>
+        <section className="max-h-[calc(100%_-_4rem)] overflow-y-auto p-3">{children}</section>
         <Footer />
       </main>
     </div>
