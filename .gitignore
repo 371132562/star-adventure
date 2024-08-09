@@ -9,6 +9,9 @@
 .nitro
 .cache
 
+#vitepress
+.vitepress/cache/
+
 # production
 /build
 
