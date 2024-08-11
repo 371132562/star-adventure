@@ -10,7 +10,7 @@
 .cache
 
 #vitepress
-.vitepress/cache
+**/.vitepress/cache
 
 # production
 /build
