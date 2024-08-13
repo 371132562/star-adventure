@@ -49,6 +49,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Star Doc',
   description: 'Adventure',
+  head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
   cleanUrls: true,
   // srcDir: './docs',
   markdown: {
