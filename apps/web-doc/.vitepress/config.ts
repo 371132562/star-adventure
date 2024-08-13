@@ -1,12 +1,56 @@
 import { defineConfig } from 'vitepress';
 
-// https://vitepress.dev/reference/site-config
+const nav = () => {
+  return [
+    { text: '前端', link: '/docs/frontend/javascript/typeConversion' },
+    { text: '计算机', link: '/docs/computerScience/twosComplement' },
+    { text: '数据结构', link: '/docs/dataStructures/arrayAndLinkedList' },
+    { text: '网络', link: '/docs/network/connectionManagement' }
+  ];
+};
+
+const sideBar = () => {
+  return {
+    '/docs/frontend': [
+      {
+        text: 'JS',
+        items: [{ text: '类型转换', link: '/docs/frontend/javascript/typeConversion' }],
+
+        collapsed: true
+      },
+      {
+        text: 'CSS',
+        items: [],
+        collapsed: true
+      }
+    ],
+    '/docs/computerScience/': [
+      {
+        text: '计算机组成原理',
+        items: [{ text: '补码', link: '/docs/computerScience/twosComplement' }]
+      }
+    ],
+    '/docs/dataStructures/': [
+      {
+        text: '数据结构',
+        items: [{ text: '数组和链表', link: '/docs/dataStructures/arrayAndLinkedList' }]
+      }
+    ],
+    '/docs/network/': [
+      {
+        text: '网络',
+        items: [{ text: '三次握手和四次挥手', link: '/docs/network/connectionManagement' }]
+      }
+    ]
+  };
+};
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Star Doc',
   description: 'Adventure',
   cleanUrls: true,
-  srcDir: './docs',
+  // srcDir: './docs',
   markdown: {
     lineNumbers: true,
     image: {
@@ -36,54 +80,43 @@ export default defineConfig({
       }
     },
 
-    nav: [
-      { text: '前端', link: '/frontend/javascript/typeConversion' },
-      { text: '计算机', link: '/computerScience/twosComplement' },
-      { text: '数据结构', link: '/dataStructures/arrayAndLinkedList' },
-      { text: '网络', link: '/network/connectionManagement' }
-    ],
+    nav: nav(),
 
-    sidebar: {
-      '/frontend': [
-        {
-          text: 'JS',
-          items: [{ text: '类型转换', link: '/frontend/javascript/typeConversion' }],
+    sidebar: sideBar(),
 
-          collapsed: true
-        },
-        {
-          text: 'CSS',
-          items: [],
-          collapsed: true
-        }
-      ],
-      '/computerScience/': [
-        {
-          text: '计算机组成原理',
-          items: [{ text: '补码', link: '/computerScience/twosComplement' }]
-        }
-      ],
-      '/dataStructures/': [
-        {
-          text: '数据结构',
-          items: [{ text: '数组和链表', link: '/dataStructures/arrayAndLinkedList' }]
-        }
-      ],
-      '/network/': [
-        {
-          text: '网络',
-          items: [{ text: '三次握手和四次挥手', link: '/network/connectionManagement' }]
-        }
-      ]
-    },
+    // editLink: {
+    //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+    //   text: '在 GitHub 上编辑此页面'
+    // },
+
+    // footer: {
+    //   message: '基于 MIT 许可发布',
+    //   copyright: `版权所有 © 2019-${new Date().getFullYear()} 尤雨溪`
+    // },
 
     docFooter: {
       prev: '上一页',
       next: '下一页'
     },
+
     outline: {
       label: '页面导航'
-    }
+    },
+
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'medium'
+      }
+    },
+
+    langMenuLabel: '多语言',
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式'
 
     // socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
   }
