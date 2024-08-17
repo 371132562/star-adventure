@@ -1,5 +1,14 @@
 import { defineConfig } from 'vitepress';
 
+const viteConfig = () => {
+  return {
+    server: {
+      host: '0.0.0.0',
+      port: 3000
+    }
+  };
+};
+
 const nav = () => {
   return [
     { text: '前端', link: '/docs/frontend/javascript/typeConversion' },
@@ -14,7 +23,10 @@ const sideBar = () => {
     '/docs/frontend': [
       {
         text: 'JS',
-        items: [{ text: '类型转换', link: '/docs/frontend/javascript/typeConversion' }],
+        items: [
+          { text: '类型转换', link: '/docs/frontend/javascript/typeConversion' },
+          { text: 'valueOf()和toString()', link: '/docs/frontend/javascript/valueOfAndToString' }
+        ],
 
         collapsed: true
       },
@@ -46,6 +58,7 @@ const sideBar = () => {
 };
 
 export default defineConfig({
+  vite: viteConfig(),
   lang: 'zh-CN',
   title: 'Star Doc',
   description: 'Adventure',
@@ -101,6 +114,7 @@ export default defineConfig({
     },
 
     outline: {
+      level: [2, 3],
       label: '页面导航'
     },
 
