@@ -25,7 +25,7 @@ const sideBar = () => {
         text: 'JS',
         items: [
           { text: '类型转换', link: '/docs/frontend/javascript/typeConversion' },
-          { text: 'valueOf()和toString()', link: '/docs/frontend/javascript/valueOfAndToString' }
+          { text: 'valueOf和toString', link: '/docs/frontend/javascript/valueOfAndToString' }
         ],
 
         collapsed: true

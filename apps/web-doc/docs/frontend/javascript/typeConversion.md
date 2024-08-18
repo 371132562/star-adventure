@@ -1,5 +1,5 @@
 # 类型转换 {#typeConversion}
-JavaScript是弱类型语言，这意味着它不像Java，C++一样的强类型语言有预先确定的类型。JS在运行过程中会自动尝试将不同类型变量转换为同一类型，这种被动的类型转换被称为`隐式类型转换`。并且在JS当中只存在其他类型向`String,Number,Boolean`的转换。
+`JavaScript`是弱类型语言，这意味着它不像`Java`，`C++`一样的强类型语言有预先确定的类型。你可以使用与预期类型不同类型的值，并且`Javascript`将为你转换它为正确的类型，这种被动的类型转换被称为`隐式类型转换`或`强制类型转换`。通常在JS当中只存在其他类型向`String,Number,Boolean`的转换。
 
 ## `Number()`转换规则 {#Number}
 
@@ -16,7 +16,7 @@ JavaScript是弱类型语言，这意味着它不像Java，C++一样的强类型
 - **Symbol**：会抛出`TypeError`错误。
 - **[对象](#Object)**：调用`valueOf()`方法，并按照上述规则转换返回的值。如果转换结果是`NaN`，则调用`toString()`方法，再按照转换字符串的规则转换。
 > [!NOTE]
-> 一元加操作符与`Number()`函数遵循相同的转换规则，可用于快捷转换字符串类型的数字。
+> 一元加操作符与`Number()`函数遵循相同的转换规则，属于强制数字转换，可用于快捷转换字符串类型的数字。
 
 ## `String()`转换规则 {#String}
 
@@ -67,7 +67,7 @@ JavaScript是弱类型语言，这意味着它不像Java，C++一样的强类型
 
 首先检查对象是否有`[Symbol.toPrimitive]`(ES6之后可手动定义)方法：
 
-如果对象定义了这个方法，JavaScript会调用它，传递一个提示参数(hint)来指定期望的转换类型。这种情况下，`[Symbol.toPrimitive]`会返回一个原始值。
+如果对象定义了这个方法，JavaScript会调用它，传递一个提示参数(hint)来指定期望的转换类型。注意，`[Symbol.toPrimitive]`只被允许返回一个**原始类型值**。
 ```js
 let obj = {
     [Symbol.toPrimitive](hint) {
