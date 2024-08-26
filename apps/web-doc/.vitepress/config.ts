@@ -74,6 +74,7 @@ const sideBar = () => {
 
 export default defineConfig({
   vite: viteConfig(),
+  base: '/star-adventure/',
   lang: 'zh-CN',
   title: 'Star Doc',
   description: 'Adventure',
