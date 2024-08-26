@@ -30,18 +30,31 @@ const sideBar = () => {
           { text: '标签语句', link: '/docs/frontend/javascript/labelStatement' }
         ],
 
-        collapsed: true
+        collapsed: false
       },
       {
         text: 'CSS',
         items: [],
-        collapsed: true
+        collapsed: false
+      },
+      {
+        text: '工程化',
+        items: [{ text: 'Javascript模块', link: '/docs/frontend/engineering/javascriptModules' }],
+        collapsed: false
+      },
+      {
+        text: '浏览器',
+        items: [{ text: 'MIME类型', link: '/docs/frontend/browser/mime' }],
+        collapsed: false
       }
     ],
     '/docs/computerScience/': [
       {
         text: '计算机组成原理',
-        items: [{ text: '补码', link: '/docs/computerScience/twosComplement' }]
+        items: [
+          { text: '高速缓存Cache', link: '/docs/computerScience/cache' },
+          { text: '补码', link: '/docs/computerScience/twosComplement' }
+        ]
       }
     ],
     '/docs/dataStructures/': [
@@ -75,6 +88,8 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/images/logo.png',
+
     search: {
       provider: 'local',
       options: {

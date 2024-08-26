@@ -1,1 +1,5 @@
-# 数组和链表
+---
+title: arrayAndLinkedList
+---
+
+# 数组和链表 {#arrayAndLinkedList}

@@ -1,3 +1,7 @@
+---
+title: labelStatement
+---
+
 # 标签语句 {#labelStatement}
 
 标签语句`label: statement`是一种标记代码块的方法，可以在代码中任意位置使用。标签语句的语法如下：
@@ -11,11 +15,11 @@ start: for (let i = 0; i < count; i++) { // [!code highlight]
 `break`和`continue`都可以与标签语句一起使用，返回代码中特定的位置。这通常是在嵌套循环中，如下面的例子所示：
 ```js
 let num = 0;
-outermost:
+outermost: // [!code highlight]
 for (let i = 0; i < 10; i++) {
   for (let j = 0; j < 10; j++) {
     if (i == 5 && j == 5) {
-      break outermost;
+      break outermost; // [!code highlight]
     }
     num++;
   }

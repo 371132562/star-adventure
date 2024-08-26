@@ -1,3 +1,7 @@
+---
+title: shortCircuitLogic
+---
+
 # 短路逻辑 {#shortCircuitLogic}
 
 > 本章节内容涉及[类型转换](./typeConversion)的内容，会将操作数转换为布尔值
