@@ -1,7 +1,3 @@
----
-title: valueOfAndToString
----
-
 # valueOf和toString
 
 通常情况下，我们不需要直接调用`valueOf()`和`toString()`方法，因为 JavaScript 引擎需要原始值时自动调用这两个方法。

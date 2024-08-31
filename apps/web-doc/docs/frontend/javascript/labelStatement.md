@@ -1,7 +1,3 @@
----
-title: labelStatement
----
-
 # 标签语句 {#labelStatement}
 
 标签语句`label: statement`是一种标记代码块的方法，可以在代码中任意位置使用。标签语句的语法如下：

@@ -1,7 +1,3 @@
----
-title: typeConversion
----
-
 # 类型转换 {#typeConversion}
 `JavaScript`是弱类型语言，这意味着它不像`Java`，`C++`一样的强类型语言有预先确定的类型。你可以使用与预期类型不同类型的值，并且`Javascript`将为你转换它为正确的类型，这种被动的类型转换被称为`隐式类型转换`或`强制类型转换`。通常在JS当中只存在其他类型向`String,Number,Boolean`的转换。
 

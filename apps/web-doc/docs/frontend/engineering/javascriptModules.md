@@ -1,7 +1,3 @@
----
-title: JavaScriptModules
----
-
 # Javascript模块 {#javascriptModules}
 
 ## 背景 {#background}

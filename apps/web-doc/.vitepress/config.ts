@@ -1,120 +1,37 @@
 import { defineConfig } from 'vitepress';
 
-const viteConfig = () => {
-  return {
-    server: {
-      host: '0.0.0.0',
-      port: 3000
-    }
-  };
-};
-
-const nav = () => {
-  return [
-    { text: '前端', link: '/docs/frontend/javascript/typeConversion' },
-    { text: '计算机', link: '/docs/computerScience/twosComplement' },
-    { text: '数据结构', link: '/docs/dataStructures/arrayAndLinkedList' },
-    { text: '网络', link: '/docs/network/connectionManagement' }
-  ];
-};
-
-const sideBar = () => {
-  return {
-    '/docs/frontend': [
-      {
-        text: 'JS',
-        items: [
-          { text: '类型转换', link: '/docs/frontend/javascript/typeConversion' },
-          { text: 'valueOf和toString', link: '/docs/frontend/javascript/valueOfAndToString' },
-          { text: '短路逻辑', link: '/docs/frontend/javascript/shortCircuitLogic' },
-          { text: '标签语句', link: '/docs/frontend/javascript/labelStatement' }
-        ],
-
-        collapsed: false
-      },
-      {
-        text: 'CSS',
-        items: [],
-        collapsed: false
-      },
-      {
-        text: '工程化',
-        items: [{ text: 'Javascript模块', link: '/docs/frontend/engineering/javascriptModules' }],
-        collapsed: false
-      },
-      {
-        text: '浏览器',
-        items: [{ text: 'MIME类型', link: '/docs/frontend/browser/mime' }],
-        collapsed: false
-      }
-    ],
-    '/docs/computerScience/': [
-      {
-        text: '计算机组成原理',
-        items: [
-          { text: '高速缓存Cache', link: '/docs/computerScience/cache' },
-          { text: '补码', link: '/docs/computerScience/twosComplement' }
-        ]
-      }
-    ],
-    '/docs/dataStructures/': [
-      {
-        text: '数据结构',
-        items: [{ text: '数组和链表', link: '/docs/dataStructures/arrayAndLinkedList' }]
-      }
-    ],
-    '/docs/network/': [
-      {
-        text: '网络',
-        items: [{ text: '三次握手和四次挥手', link: '/docs/network/connectionManagement' }]
-      }
-    ]
-  };
-};
+import language from './config/language';
+import nav from './config/nav';
+import search from './config/search';
+import sideBar from './config/sidebar';
+import viteConfig from './config/vite.config';
 
 export default defineConfig({
   vite: viteConfig(),
+
   base: '/star-adventure/',
   lang: 'zh-CN',
   title: 'Star Doc',
   description: 'Adventure',
   head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
-  cleanUrls: true,
+  cleanUrls: true, //省略url中的html后缀
   // srcDir: './docs',
   markdown: {
-    lineNumbers: true,
+    lineNumbers: true, // 代码块显示行号
     image: {
-      lazyLoading: true
+      lazyLoading: true // 图片懒加载
     }
   },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: '/images/logo.png',
 
-    search: {
-      provider: 'local',
-      options: {
-        translations: {
-          button: {
-            buttonText: '搜索文档',
-            buttonAriaLabel: '搜索文档'
-          },
-          modal: {
-            noResultsText: '无法找到相关结果',
-            resetButtonTitle: '清除查询条件',
-            footer: {
-              selectText: '选择',
-              navigateText: '切换',
-              closeText: '关闭'
-            }
-          }
-        }
-      }
-    },
+    search: search(),
 
     nav: nav(),
 
     sidebar: sideBar(),
+
+    ...language(),
 
     // editLink: {
     //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
@@ -126,31 +43,11 @@ export default defineConfig({
     //   copyright: `版权所有 © 2019-${new Date().getFullYear()} 尤雨溪`
     // },
 
-    docFooter: {
-      prev: '上一页',
-      next: '下一页'
-    },
-
-    outline: {
-      level: [2, 3],
-      label: '页面导航'
-    },
-
-    lastUpdated: {
-      text: '最后更新于',
-      formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'medium'
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/371132562/star-adventure/tree/master/apps/web-doc'
       }
-    },
-
-    langMenuLabel: '多语言',
-    returnToTopLabel: '回到顶部',
-    sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '主题',
-    lightModeSwitchTitle: '切换到浅色模式',
-    darkModeSwitchTitle: '切换到深色模式'
-
-    // socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
+    ]
   }
 });

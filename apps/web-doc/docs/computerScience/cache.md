@@ -1,5 +1,1 @@
----
-title: Cache
----
-
 # Cache {#cache}
