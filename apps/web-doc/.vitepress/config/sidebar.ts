@@ -58,7 +58,8 @@ const sideBar = () => {
         text: 'Linux',
         items: [
           { text: '虚拟机安装Ubuntu备忘录', link: '/docs/linux/vmwareInstallMemo' },
-          { text: 'SSH密钥生成', link: '/docs/linux/sshKeyGenerate' }
+          { text: 'SSH密钥生成', link: '/docs/linux/sshKeyGenerate' },
+          { text: 'Docker', link: '/docs/linux/docker' }
         ]
       }
     ]
