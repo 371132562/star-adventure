@@ -26,7 +26,8 @@ const sideBar = () => {
         text: '浏览器',
         items: [
           { text: '深入了解现代网络浏览器', link: '/docs/frontend/browser/modernWebBrowser' },
-          { text: 'JS加载中的defer和async', link: '/docs/frontend/browser/deferAndAsync' }
+          { text: 'JS加载中的defer和async', link: '/docs/frontend/browser/deferAndAsync' },
+          { text: '预加载扫描器', link: '/docs/frontend/browser/preloadScanner' }
         ],
         collapsed: false
       }
@@ -55,7 +56,10 @@ const sideBar = () => {
     '/docs/linux/': [
       {
         text: 'Linux',
-        items: [{ text: '虚拟机安装Ubuntu备忘录', link: '/docs/linux/vmwareInstallMemo' }]
+        items: [
+          { text: '虚拟机安装Ubuntu备忘录', link: '/docs/linux/vmwareInstallMemo' },
+          { text: 'SSH密钥生成', link: '/docs/linux/sshKeyGenerate' }
+        ]
       }
     ]
   };

@@ -1,6 +1,6 @@
-# 虚拟机安装Ubuntu备忘录
+# 安装Ubuntu备忘录
 
-## 网络配置
+## 虚拟机网络配置
 在VMware-虚拟机-设置-网络适配器中选择桥接模式，这样虚拟机的网络配置最为简单，会自动获取网段中的一个IP，无需额外手动配置。
 
 虽然会占用一个局域网IP，但是可以和本机及局域网内的其他设备直接通信。
@@ -30,6 +30,10 @@ git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$H
 
 ```
 安装完成后重连ssh会自动启动主题配置，根据提示配置为个人喜欢的风格即可。
+
+## 安装zsh插件
+[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
 
 ## 安装docker
 1. 安装依赖
