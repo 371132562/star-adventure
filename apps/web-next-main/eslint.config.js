@@ -1,4 +1,4 @@
-import base from '@star/eslint-prettier-config/base.tsconfig.js';
+import { starEslint } from '@star/eslint-prettier-config';
 import eslintPluginReact from 'eslint-plugin-react';
 // import path from 'node:path';
 // import { fileURLToPath } from 'node:url';
@@ -6,7 +6,7 @@ import eslintPluginReact from 'eslint-plugin-react';
 
 export default [
   eslintPluginReact.configs.flat.recommended,
-  ...base,
+  ...starEslint('eslint', { ts: true }),
   {
     rules: {
       'react/react-in-jsx-scope': 'off'

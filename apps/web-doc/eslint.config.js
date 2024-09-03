@@ -1,7 +1,7 @@
-import baseConfig from '@star/eslint-prettier-config/base.tsconfig.js';
+import { starEslint } from '@star/eslint-prettier-config';
 
 export default [
-  ...baseConfig,
+  ...starEslint('eslint', { ts: true }),
   {
     name: 'starDocEsLint',
     ignores: ['**/theme/index.ts']

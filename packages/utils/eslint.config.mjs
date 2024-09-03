@@ -1,4 +1,3 @@
-import base from '@star/eslint-prettier-config/base.tsconfig.js';
+import { starEslint } from '@star/eslint-prettier-config';
 
-export default base
-
+export default starEslint('eslint', { ts: true });

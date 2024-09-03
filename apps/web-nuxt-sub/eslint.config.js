@@ -1,6 +1,6 @@
-import base from '@star/eslint-prettier-config/base.config.js';
+import { starEslint } from '@star/eslint-prettier-config';
 
 import withNuxt from './.nuxt/eslint.config.mjs';
 
-export default withNuxt().prepend(...base);
+export default withNuxt().prepend(...starEslint('eslint'));
 // Your custom configs here

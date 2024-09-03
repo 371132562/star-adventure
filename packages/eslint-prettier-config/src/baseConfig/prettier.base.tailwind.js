@@ -1,4 +1,6 @@
-import config from './base.prettier.config.js';
+// 包含了tailwind插件的prettier配置
+
+import config from './prettier.base.js';
 
 const tailwindConfig = {
   ...config,

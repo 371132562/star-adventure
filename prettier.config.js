@@ -1,3 +1,3 @@
-import config from '@star/eslint-prettier-config/base.prettier.tailwind.config.js';
+import { starEslint } from '@star/eslint-prettier-config';
 
-export default config;
+export default starEslint('prettier', { tailwind: true });

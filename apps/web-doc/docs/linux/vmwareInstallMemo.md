@@ -16,6 +16,16 @@
     ```
 3. 重启服务器或重启sshd服务后以root登录
 
+## 时区
+```shell
+# 查询当前时区设置
+timedatectl
+# 查看所有可用的时区列表
+timedatectl list-timezones
+# 设置时区
+timedatectl set-timezone Asia/Shanghai
+```
+
 ## 安装zsh及美化
 
 1. 安装zsh `apt install zsh`

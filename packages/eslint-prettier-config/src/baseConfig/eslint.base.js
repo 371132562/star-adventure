@@ -1,3 +1,5 @@
+// 基础eslint配置 不包含ts
+
 // import globals from "globals";
 import pluginJs from '@eslint/js';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -9,7 +11,7 @@ export default [
   {
     name: 'starEsLint',
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx,vue}'],
-    ignores: ['**/node_modules/*', '**/.nuxt/*', '**/.next/*', '**/.nx/*'],
+    ignores: ['**/node_modules/*', '**/.nuxt/*', '**/.next/*', '**/.nx/*', '**/dist/*'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

@@ -1,3 +1,5 @@
+// 基础prettier配置
+
 const config = {
   printWidth: 100, // 每行代码的最大长度，超过则自动换行
   useTabs: false, // 是否使用tab缩进，false表示使用空格
