@@ -1,9 +1,9 @@
 {
-  "name": "@star/utils",
+  "name": "@linstarzzz/utils",
   "type": "module",
   "version": "0.0.1",
   "scripts": {},
   "devDependencies": {
-    "@star/eslint-prettier-config": "workspace:^"
+    "@linstarzzz/eslint-prettier-config": "workspace:^"
   }
 }

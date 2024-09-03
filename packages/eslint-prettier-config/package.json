@@ -1,8 +1,8 @@
 {
-  "name": "@star/eslint-prettier-config",
+  "name": "@linstarzzz/eslint-prettier-config",
   "license": "Apache-2.0",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint and Prettier configuration, with TypeScript support and TailwindCSS plugin",
   "keywords": [
     "eslint",
@@ -10,7 +10,10 @@
     "typescript",
     "tailwindcss"
   ],
-  "devDependencies": {
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
     "@eslint/js": "^9.8.0",
     "@types/eslint": "^9.6.1",
     "eslint": "^9.8.0",

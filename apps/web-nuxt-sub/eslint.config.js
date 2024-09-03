@@ -1,4 +1,4 @@
-import { starEslint } from '@star/eslint-prettier-config';
+import { starEslint } from '@linstarzzz/eslint-prettier-config';
 
 import withNuxt from './.nuxt/eslint.config.mjs';
 

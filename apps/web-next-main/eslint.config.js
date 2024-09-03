@@ -1,4 +1,4 @@
-import { starEslint } from '@star/eslint-prettier-config';
+import { starEslint } from '@linstarzzz/eslint-prettier-config';
 import eslintPluginReact from 'eslint-plugin-react';
 // import path from 'node:path';
 // import { fileURLToPath } from 'node:url';

@@ -1,5 +1,5 @@
 {
-  "name": "@star/adventure",
+  "name": "@linstarzzz/adventure",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -7,7 +7,7 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@star/eslint-prettier-config": "workspace:^",
+    "@linstarzzz/eslint-prettier-config": "workspace:^",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.8.0",
     "lerna": "^8.1.7",
