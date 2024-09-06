@@ -10,11 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.12.4",
+    "nuxt": "^3.13.0",
     "vue": "latest"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.4.0",
+    "@nuxt/eslint": "^0.5.5",
     "@linstarzzz/eslint-prettier-config": "workspace:^"
   }
 }
