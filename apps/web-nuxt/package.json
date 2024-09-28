@@ -1,5 +1,5 @@
 {
-  "name": "@linstarzzz/web-nuxt-sub",
+  "name": "@linstarzzz/web-nuxt",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -10,11 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.13.0",
+    "@nuxt/ui": "^2.18.6",
+    "nuxt": "^3.13.2",
     "vue": "latest"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.5.5",
-    "@linstarzzz/eslint-prettier-config": "workspace:^"
+    "@linstarzzz/eslint-prettier-config": "workspace:^",
+    "@nuxt/eslint": "^0.5.7"
   }
 }
