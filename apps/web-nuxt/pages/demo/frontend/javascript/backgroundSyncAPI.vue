@@ -1,10 +1,5 @@
 <script setup lang="ts">
   onMounted(() => {
-    Notification.requestPermission().then(permission => {
-      if (permission === 'granted') {
-        console.log('已允许通知');
-      }
-    });
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/demo/syncServiceWorker.js')
@@ -18,11 +13,18 @@
   });
 
   const offlineFunc = () => {
-    //注册离线同步事件
-    navigator.serviceWorker.ready.then(registration => {
-      registration.sync.register('offlineData').then(() => {
-        console.log('离线同步事件注册成功');
-      });
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+        console.log('已允许通知');
+        //注册离线同步事件
+        navigator.serviceWorker.ready.then(registration => {
+          registration.sync.register('offlineData').then(() => {
+            console.log('离线同步事件注册成功');
+          });
+        });
+      } else {
+        console.log('通知被拦截');
+      }
     });
   };
 </script>

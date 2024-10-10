@@ -15,6 +15,7 @@
   const mockFetch = () => {
     Notification.requestPermission().then(permission => {
       if (permission === 'granted') {
+        console.log('已允许通知');
         fetch('/api/serviceWorker/mockData')
           .then(response => response.json())
           .then(data => {
@@ -23,6 +24,8 @@
           .catch(error => {
             console.error('请求失败:', error);
           });
+      } else {
+        console.log('通知被拦截');
       }
     });
   };
