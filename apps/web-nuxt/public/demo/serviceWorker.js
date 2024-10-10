@@ -13,6 +13,12 @@ self.addEventListener('activate', (event) => {
 // 拦截 fetch 请求并返回自定义数据
 self.addEventListener('fetch', (event) => {
   if (event.request.url.includes('/api/serviceWorker/mockData')) {
+    const title =  '通知';
+    const options = {
+      body: '这是来自 Service Worker 的通知调用',
+    };
+    event.waitUntil(self.registration.showNotification(title, options))
+
     event.respondWith(
       new Response(JSON.stringify({
         message: '这是来自 Service Worker 的自定义数据'
@@ -20,6 +26,7 @@ self.addEventListener('fetch', (event) => {
         headers: { 'Content-Type': 'application/json' }
       })
     );
+
   } else {
     event.respondWith(fetch(event.request));
   }

@@ -13,14 +13,18 @@
   });
 
   const mockFetch = () => {
-    fetch('/api/serviceWorker/mockData')
-      .then(response => response.json())
-      .then(data => {
-        console.log('从 Service Worker 中获取的数据:', data);
-      })
-      .catch(error => {
-        console.error('请求失败:', error);
-      });
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+        fetch('/api/serviceWorker/mockData')
+          .then(response => response.json())
+          .then(data => {
+            console.log('从 Service Worker 中获取的数据:', data);
+          })
+          .catch(error => {
+            console.error('请求失败:', error);
+          });
+      }
+    });
   };
 </script>
 <template>
@@ -29,7 +33,7 @@
     <UButton
       id="fetch-data"
       @click="mockFetch"
-      >点击请求一个不存在的接口</UButton
+      >点击请求通知权限，允许后发起一个mock请求</UButton
     >
   </div>
 </template>
