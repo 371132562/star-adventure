@@ -31,7 +31,7 @@
 
 <template>
   <div>
-    <p>首先断开网络，然后点击按钮观察弹出通知</p>
+    <p>首先断开网络，点击按钮，允许弹出通知，恢复网络观察表现</p>
     <UButton
       id="fetch-data"
       @click="offlineFunc"
