@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
   onMounted(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -30,8 +30,8 @@
 </script>
 
 <template>
-  <div>
-    <p>首先断开网络，点击按钮，允许弹出通知，恢复网络观察表现</p>
+  <div class="w-full text-center">
+    <p class="leading-10">首先断开网络，点击按钮，允许弹出通知，恢复网络观察表现</p>
     <UButton
       id="fetch-data"
       @click="offlineFunc"
@@ -39,5 +39,3 @@
     >
   </div>
 </template>
-
-<style scoped lang="scss"></style>

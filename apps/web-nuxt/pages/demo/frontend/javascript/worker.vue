@@ -31,8 +31,8 @@
   };
 </script>
 <template>
-  <div>
-    <p>打开控制台观察Network，点击按钮，允许弹出通知</p>
+  <div class="w-full text-center">
+    <p class="leading-10">打开控制台观察Network，点击按钮，允许弹出通知</p>
     <UButton
       id="fetch-data"
       @click="mockFetch"
