@@ -2,6 +2,7 @@
 
 export default {
   printWidth: 100, // 每行代码的最大长度，超过则自动换行
+  semi: false, // 分号
   useTabs: false, // 是否使用tab缩进，false表示使用空格
   singleQuote: true, // 是否使用单引号
   trailingComma: 'none', // 逗号风格，all表示在对象、数组等结构的末尾都加逗号

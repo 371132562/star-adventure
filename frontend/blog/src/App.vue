@@ -1,11 +1,13 @@
 <script setup lang="ts">
   import { RouterLink, RouterView } from 'vue-router';
   import HelloWorld from './components/HelloWorld.vue';
+  import { ref } from 'vue';
+  const a = ref<number[]>([1, 2]);
+  a.value = [1, 2, 3];
 </script>
 
 <template>
   <header>
-    <a-button type="primary">Primary Button</a-button>
     <img
       alt="Vue logo"
       class="logo"
